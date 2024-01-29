@@ -1,3 +1,5 @@
+using Assignment_2.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace Assignment_2
 {
@@ -8,6 +10,11 @@ namespace Assignment_2
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+
+            builder.Services.AddDbContext<ApplicationDbContext>(options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("EFBasics"));
+            });
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
