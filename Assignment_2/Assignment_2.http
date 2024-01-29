@@ -1,6 +1,19 @@
-@Assignment_2_HostAddress = http://localhost:5111
+﻿@Assignment_2_HostAddress = https://localhost:7272
+@WebApiHost = https://localhost:7272
 
-GET {{Assignment_2_HostAddress}}/weatherforecast/
-Accept: application/json
+GET {{Assignment_2_HostAddress}}/api/employees
+
+###
+
+
+POST {{Assignment_2_HostAddress}}/api/employees
+Content-Type: application/json
+
+{
+  "firstName": "string",
+  "lastName": "string",
+  "dateOfBirth": "2024-01-29T01:47:09.349Z",
+  "maritalStatus": "string"
+}
 
 ###

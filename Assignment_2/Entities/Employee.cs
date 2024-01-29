@@ -8,12 +8,13 @@ namespace Assignment_2.Entities
     {
         public int EmployeeID { get; set; }
         [MaxLength(50)]
-        public int FirstName { get; set; }
+        public string FirstName { get; set; }
         [MaxLength(50)]
-        public int LastName { get; set; }
+        public string LastName { get; set; }
         [MaxLength(50)]
         public DateTime DateOfBirth { get; set; }
-
+        [MaxLength(50)]
         public string maritalStatus { get; set; }
+
     }
 }
